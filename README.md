@@ -10,7 +10,7 @@ This is a virtual environment created using Unity engine. It was created to be u
 
 ## Run a virtual game with OriGami
 
-1. Download the VR world app ([MacOS](https://github.com/origami-team/origami-VR-world/releases), [WinOS](https://github.com/origami-team/origami-VR-world/releases))
+1. Download the VR world app ([MacOS](https://github.com/origami-team/origami-vr/releases/download/v0.1-alpha/OriGami_VR_World_App_MacOS.zip), [WinOS](https://github.com/origami-team/origami-vr/releases/download/v0.1-alpha/OriGami_VR_World_App_WinOS.zip))
 2. Run your virtual game in OriGami. For starting the game, you will be requested to create a 5-digit code.
 3. Run the corresponding VR world app and type in your 5-digit code.
 
