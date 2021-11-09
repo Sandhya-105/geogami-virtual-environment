@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/InputMaster.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/InputMaster.inputactions'
 
 using System;
 using System.Collections;
@@ -27,6 +27,14 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""WalkBWD"",
+                    ""type"": ""Button"",
+                    ""id"": ""d9e8858e-1a32-4028-bd86-6050f1fe7cf7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""RotateRight"",
                     ""type"": ""Button"",
                     ""id"": ""de033abc-bd89-4cd7-8a97-deb5be0ae3ce"",
@@ -38,14 +46,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""name"": ""RotateLeft"",
                     ""type"": ""Button"",
                     ""id"": ""5cd518ed-84f8-43a1-8bbf-a60cb76405ad"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""WalkBWD"",
-                    ""type"": ""Button"",
-                    ""id"": ""d9e8858e-1a32-4028-bd86-6050f1fe7cf7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -177,39 +177,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1ab003a6-0dd7-4833-8c44-849536d7456e"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""WalkBWD"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a0a0395a-39e3-4e0e-842d-fc5cc4f30c12"",
-                    ""path"": ""<Joystick>/stick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""WalkBWD"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1943246e-80cd-4eac-99fc-69d96e7257d7"",
-                    ""path"": ""<HID::Microsoft Unknown>/hat/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""WalkBWD"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""85e04384-58e6-4a43-9b73-fcd32960bb32"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
@@ -240,6 +207,39 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""RotateUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1ab003a6-0dd7-4833-8c44-849536d7456e"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WalkBWD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0a0395a-39e3-4e0e-842d-fc5cc4f30c12"",
+                    ""path"": ""<Joystick>/stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WalkBWD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1943246e-80cd-4eac-99fc-69d96e7257d7"",
+                    ""path"": ""<HID::Microsoft Unknown>/hat/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WalkBWD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -249,9 +249,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
         // Avatar
         m_Avatar = asset.FindActionMap("Avatar", throwIfNotFound: true);
         m_Avatar_WalkFWD = m_Avatar.FindAction("WalkFWD", throwIfNotFound: true);
+        m_Avatar_WalkBWD = m_Avatar.FindAction("WalkBWD", throwIfNotFound: true);
         m_Avatar_RotateRight = m_Avatar.FindAction("RotateRight", throwIfNotFound: true);
         m_Avatar_RotateLeft = m_Avatar.FindAction("RotateLeft", throwIfNotFound: true);
-        m_Avatar_WalkBWD = m_Avatar.FindAction("WalkBWD", throwIfNotFound: true);
         m_Avatar_RotateUp = m_Avatar.FindAction("RotateUp", throwIfNotFound: true);
         m_Avatar_SpeedUp = m_Avatar.FindAction("SpeedUp", throwIfNotFound: true);
         m_Avatar_SpeedDown = m_Avatar.FindAction("SpeedDown", throwIfNotFound: true);
@@ -305,9 +305,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Avatar;
     private IAvatarActions m_AvatarActionsCallbackInterface;
     private readonly InputAction m_Avatar_WalkFWD;
+    private readonly InputAction m_Avatar_WalkBWD;
     private readonly InputAction m_Avatar_RotateRight;
     private readonly InputAction m_Avatar_RotateLeft;
-    private readonly InputAction m_Avatar_WalkBWD;
     private readonly InputAction m_Avatar_RotateUp;
     private readonly InputAction m_Avatar_SpeedUp;
     private readonly InputAction m_Avatar_SpeedDown;
@@ -316,9 +316,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
         private @InputMaster m_Wrapper;
         public AvatarActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @WalkFWD => m_Wrapper.m_Avatar_WalkFWD;
+        public InputAction @WalkBWD => m_Wrapper.m_Avatar_WalkBWD;
         public InputAction @RotateRight => m_Wrapper.m_Avatar_RotateRight;
         public InputAction @RotateLeft => m_Wrapper.m_Avatar_RotateLeft;
-        public InputAction @WalkBWD => m_Wrapper.m_Avatar_WalkBWD;
         public InputAction @RotateUp => m_Wrapper.m_Avatar_RotateUp;
         public InputAction @SpeedUp => m_Wrapper.m_Avatar_SpeedUp;
         public InputAction @SpeedDown => m_Wrapper.m_Avatar_SpeedDown;
@@ -334,15 +334,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @WalkFWD.started -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkFWD;
                 @WalkFWD.performed -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkFWD;
                 @WalkFWD.canceled -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkFWD;
+                @WalkBWD.started -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkBWD;
+                @WalkBWD.performed -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkBWD;
+                @WalkBWD.canceled -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkBWD;
                 @RotateRight.started -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateRight;
                 @RotateRight.performed -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateRight;
                 @RotateRight.canceled -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateRight;
                 @RotateLeft.started -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateLeft;
                 @RotateLeft.performed -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateLeft;
                 @RotateLeft.canceled -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateLeft;
-                @WalkBWD.started -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkBWD;
-                @WalkBWD.performed -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkBWD;
-                @WalkBWD.canceled -= m_Wrapper.m_AvatarActionsCallbackInterface.OnWalkBWD;
                 @RotateUp.started -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateUp;
                 @RotateUp.performed -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateUp;
                 @RotateUp.canceled -= m_Wrapper.m_AvatarActionsCallbackInterface.OnRotateUp;
@@ -359,15 +359,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @WalkFWD.started += instance.OnWalkFWD;
                 @WalkFWD.performed += instance.OnWalkFWD;
                 @WalkFWD.canceled += instance.OnWalkFWD;
+                @WalkBWD.started += instance.OnWalkBWD;
+                @WalkBWD.performed += instance.OnWalkBWD;
+                @WalkBWD.canceled += instance.OnWalkBWD;
                 @RotateRight.started += instance.OnRotateRight;
                 @RotateRight.performed += instance.OnRotateRight;
                 @RotateRight.canceled += instance.OnRotateRight;
                 @RotateLeft.started += instance.OnRotateLeft;
                 @RotateLeft.performed += instance.OnRotateLeft;
                 @RotateLeft.canceled += instance.OnRotateLeft;
-                @WalkBWD.started += instance.OnWalkBWD;
-                @WalkBWD.performed += instance.OnWalkBWD;
-                @WalkBWD.canceled += instance.OnWalkBWD;
                 @RotateUp.started += instance.OnRotateUp;
                 @RotateUp.performed += instance.OnRotateUp;
                 @RotateUp.canceled += instance.OnRotateUp;
@@ -384,9 +384,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
     public interface IAvatarActions
     {
         void OnWalkFWD(InputAction.CallbackContext context);
+        void OnWalkBWD(InputAction.CallbackContext context);
         void OnRotateRight(InputAction.CallbackContext context);
         void OnRotateLeft(InputAction.CallbackContext context);
-        void OnWalkBWD(InputAction.CallbackContext context);
         void OnRotateUp(InputAction.CallbackContext context);
         void OnSpeedUp(InputAction.CallbackContext context);
         void OnSpeedDown(InputAction.CallbackContext context);
