@@ -16,7 +16,7 @@ This is a virtual environment created using Unity engine. It was created to be u
 
 _For Mac Users (for running the VR world app):_
 1. Open terminal at the folder of the VR world app.
-3. Execute the code: `chmod a+x APPNAME.app/Contents/MacOS/*`
+3. Execute the code: `chmod a+x OriGami_VR_World_App_MacOS.app/Contents/MacOS/*`
 
 ## Control the Avatar in the VR world app
 
