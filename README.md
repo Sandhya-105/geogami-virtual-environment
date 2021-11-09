@@ -16,16 +16,21 @@ This is a virtual environment created using Unity engine. It was created to be u
 
 _For Mac Users (for running the VR world app):_
 1. Open terminal at the folder of the VR world app.
-3. Execute the code: `chmod a+x OriGami_VR_World_App_MacOS.app/Contents/MacOS/*`
+2. Execute the code: `xattr -cr /path/to/application.app`
+
+   For example:
+   
+   `xattr -cr /Downloads/OriGami_VR_World_App_MacOS.app`
+  
 
 ## Control the Avatar in the VR world app
 
 In order to control the avatar, use an external controller or your keyboard.
 
-_Controller:_
-- Attention: You cannot use the arrow buttons for turning, since we chose other buttons to control turning. Please try yourself.
+_:video_game: Controller:_
+- Attention: You cannot use the arrow buttons for turning, since we chose other buttons to control turning. Please try yourself :wink:.
 
-_Keyboard:_
+_:keyboard: Keyboard:_
 - up arrow: move forward
 - back arrow: move backward
 - right arrow: increase walking speed (!)
