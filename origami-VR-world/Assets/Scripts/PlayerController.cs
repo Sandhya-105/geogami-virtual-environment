@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public Animator anim;
-    
+
     public float gravity = -9.81f;
     Vector3 velocity;
     public float groundDistance = 0.4f;
@@ -26,12 +26,13 @@ public class PlayerController : MonoBehaviour
     /* Test Multiuser impl. 29.09.21 */
     public bool connectedToServer = false;
 
-    void Awake(){
+    void Awake()
+    {
         Debug.Log("Awake: PlayerController");
         controls = new InputMaster();
 
         //controls.GamePlay.Front.performed += ctx => WalkFWD();
-        
+
         // avatar WalkFWD
         controls.Avatar.WalkFWD.started += ctx => WalkFWD();
         controls.Avatar.WalkFWD.canceled += ctx => CancelWalkFWD();
@@ -62,63 +63,74 @@ public class PlayerController : MonoBehaviour
     }
 
     // avatar WalkBWD
-    void WalkFWD(){
-         movemwntStatus = true;
-         Debug.Log("WalkFWD: ");
-         anim.SetFloat("vertical", 1.0f);        
+    void WalkFWD()
+    {
+        movemwntStatus = true;
+        Debug.Log("WalkFWD: ");
+        anim.SetFloat("vertical", 1.0f);
     }
-    void CancelWalkFWD(){
+    void CancelWalkFWD()
+    {
         movemwntStatus = false;
         Debug.Log("CancelWalkFWD: ");
         anim.SetFloat("vertical", 0.0f);
 
     }
-    
+
     // avatar WalkBWD
-    void WalkBWD(){
-         movemwntStatus = true;
-         Debug.Log("WalkBWD: ");
-         anim.SetFloat("vertical", -1.0f);
+    void WalkBWD()
+    {
+        movemwntStatus = true;
+        Debug.Log("WalkBWD: ");
+        anim.SetFloat("vertical", -1.0f);
 
     }
-    void CancelWalkBWD(){
+    void CancelWalkBWD()
+    {
         movemwntStatus = false;
         Debug.Log("CancelWalkBWD: ");
         anim.SetFloat("vertical", 0.1f);
     }
 
     // increase avatar speed
-    void SpeedUp(){
-        if(speedSliderInstance.value < 7){
+    void SpeedUp()
+    {
+        if (speedSliderInstance.value < 8)
+        {
             speedSliderInstance.value += 1;
         }
-        Debug.Log("speedSliderInstance.value: "+ speedSliderInstance.value);
+        Debug.Log("speedSliderInstance.value: " + speedSliderInstance.value);
     }
 
     // decrease avatar speed
-    void SpeedDown(){
-         if(speedSliderInstance.value > 1){
+    void SpeedDown()
+    {
+        if (speedSliderInstance.value > 6)
+        {
             speedSliderInstance.value -= 1;
         }
-        Debug.Log("speedSliderInstance.value: "+ speedSliderInstance.value);
+        Debug.Log("speedSliderInstance.value: " + speedSliderInstance.value);
 
     }
 
-// Important to be able to use the controls
-    void OnEnable(){
+    // Important to be able to use the controls
+    void OnEnable()
+    {
         controls.Avatar.Enable();
     }
-    void OnDisable(){
+    void OnDisable()
+    {
         controls.Avatar.Disable();
     }
     //////////////////////////////
 
 
-    void Start(){
+    void Start()
+    {
         controller = GetComponent<CharacterController>();
         /* To Change the avatar's speed */
         Debug.Log("desiredSpeed: PlayerController");
-        anim.speed = 5;
+        anim.speed = 7;
 
 
         // repeat sending loc every second
@@ -149,11 +161,12 @@ public class PlayerController : MonoBehaviour
 
 
     void SendAvatarLocEverySecond()
-    {   
+    {
         /* Test MultiUser impl. 29.09.21 */
-        if(!connectedToServer){
+        if (!connectedToServer)
+        {
             connectedToServer = true;
-            
+
             //socket.Emit("joinGame", new JSONObject("{\"gameCode\": \""+TextTransfer.gameDetails["gameCode"]+"\"}")); // ToDO: change it to join game
             socket.Emit("joinGame", new JSONObject(TextTransfer.gameDetails));
         }
@@ -163,14 +176,14 @@ public class PlayerController : MonoBehaviour
         avatarPosition["x_axis"] = transform.position.x.ToString();
         avatarPosition["y_axis"] = transform.position.z.ToString();
         /* Test MultiUser impl. 29.09.21 */
-        
+
         avatarPosition["gameCode"] = TextTransfer.gameDetails["gameCode"];
         //if(movemwntStatus){
-            //socket.Emit("updateAvatarPosition", new JSONObject(data)); 
+        //socket.Emit("updateAvatarPosition", new JSONObject(data)); 
         //}
 
         /* Test MultiUser impl. 29.09.21 */
-        socket.Emit("updateAvatarPosition", new JSONObject(avatarPosition)); 
+        socket.Emit("updateAvatarPosition", new JSONObject(avatarPosition));
 
 
 
@@ -193,7 +206,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
 
         // Moved to  SendAvatarLocEverySecond() // 30.06.21
         // Send avatar position to server // Updated 10.08.21
@@ -216,14 +229,15 @@ public class PlayerController : MonoBehaviour
 
 
         // Put avatar above bridge in case it gets sink
-         if(transform.position.y<98.1){
+        if (transform.position.y < 98.1)
+        {
             Debug.Log("sink");
             //transform.position = new Vector3(263f, 104f, 211f);
             //transform.position =Vector3.Lerp(transform.position, new Vector3(263f, 220f, 211f), 500 * Time.fixedDeltaTime);
-            
+
             // Temp
-            transform.position =Vector3.Lerp(transform.position, new Vector3(transform.position.x + 10f, 200f, transform.position.z + 30f), 500 * Time.fixedDeltaTime);
-        } 
+            transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x + 10f, 200f, transform.position.z + 30f), 500 * Time.fixedDeltaTime);
+        }
 
         //GameObject go= GameObject.Find("Avatar");
         //Debug.Log("go.transform.position= "+ go.transform.position);
@@ -237,32 +251,33 @@ public class PlayerController : MonoBehaviour
         //controller.transform.position = new Vector3(263f, 104f, 211f);
 
         //------
-        Debug.Log("transform.position = "+ transform.position);
+        Debug.Log("transform.position = " + transform.position);
         //transform.position = transform.position +  transform.position;
         //------
 
         //transform.position = new Vector3(263f, 104f, 211f);
 
-        
+
 
     }
 
-/*     IEnumerator moveAvatar(){
-        yield return new WaitForSeconds(5);
-        transform.position = new Vector3(263f, 104f, 211f);
-        Debug.Log("moveAvatar");
-    } */
+    /*     IEnumerator moveAvatar(){
+            yield return new WaitForSeconds(5);
+            transform.position = new Vector3(263f, 104f, 211f);
+            Debug.Log("moveAvatar");
+        } */
 
 
-  /*   public void pullAvatarFromWatar(){ ////////////////////
-        transform.position = new Vector3(263f, 104f, 211f);
-        Debug.Log("pullAvatarFromWatar////");
+    /*   public void pullAvatarFromWatar(){ ////////////////////
+          transform.position = new Vector3(263f, 104f, 211f);
+          Debug.Log("pullAvatarFromWatar////");
 
-    } */
+      } */
 
 
 
-    public void ChangeSpeed(float speedV){
+    public void ChangeSpeed(float speedV)
+    {
         /* To Change the avatar's speed */
         anim.speed = speedV;
         Debug.Log("desiredSpeed: " + speedV);
