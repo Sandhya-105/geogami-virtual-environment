@@ -14,9 +14,14 @@ public class TextTransfer : MonoBehaviour
     /* SocketIO */
     public SocketIOComponent socket; // connect unity to nodeJS server
 
+    // Toggle 
+    public Toggle world1_cbox;
     void Start(){
         //Debug.Log("start fomr text trasnfer!!");
         socket.On("checkRoomExistance", GetRoomStatus);
+
+        //
+        Debug.Log("Toggle w1: "+ world1_cbox.isOn);
     }
 
     public void StoreCode(){
@@ -34,6 +39,8 @@ public class TextTransfer : MonoBehaviour
         if(System.Convert.ToBoolean(e.data["RoomStatus"].ToString())){ // if true allow user to join the game
             gameDetails["gameCode"] = gameCode_tbox.text.ToString();
             gameDetails["playerName"] = playerName_tbox.text.ToString();
+            gameDetails["vr_world_1_status"] = world1_cbox.isOn.ToString();
+
             //Debug.Log("gameCode_tbox: "+ gameDetails["gameCode"]);
             //Debug.Log("Name_tbox: "+ gameDetails["gameCode"]);
             // Move to game play scene

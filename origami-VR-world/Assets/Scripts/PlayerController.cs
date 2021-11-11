@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     /* Test Multiuser impl. 29.09.21 */
     public bool connectedToServer = false;
 
+    // Merge two versions
+    public GameObject world_1;
+    public GameObject world_2;
+    
     void Awake()
     {
         Debug.Log("Awake: PlayerController");
@@ -60,6 +64,16 @@ public class PlayerController : MonoBehaviour
         /* Test MultiUser impl. 05.10.21 */
         //Debug.Log("game code sent from menu scene : "+ TextTransfer.gameCode);
 
+        //Debug.Log("(PC1) vr_world_1_status: " + TextTransfer.gameDetails["vr_world_1_status"]);
+        //if (TextTransfer.world1_cbox.isOn)
+        if (string.Equals(TextTransfer.gameDetails["vr_world_1_status"], "True"))
+        {
+            Debug.Log("Hide w2");
+            //world_2.SetActive(false);
+        } else {
+            world_2.SetActive(true);
+            world_1.SetActive(false);
+        }
     }
 
     // avatar WalkBWD
