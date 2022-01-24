@@ -2,7 +2,7 @@
 
 This is a virtual environment created using Unity engine. It was created to be used with [GeoGami Geogame](https://github.com/origami-team/origami) for playing GeoGami map reading games within a virtual environment. 
 
-## Create a virtual game in OriGami
+## Create a virtual game in GeoGami
 
 1. Download [GeoGami Geogame](https://github.com/origami-team/origami) ([iOS AppStore](https://apps.apple.com/ph/app/origaminext/id1495660295), [Google PlayStore](https://play.google.com/store/apps/details?id=de.reedu.origaminext&gl=DE)) and create a user account.
 2. [Contact us](https://geogami.ifgi.de/kontakt.html) if you are interested in creating virtual games in OriGami. We will change your user role from "user" into "scientist" which allows you to access the VR settings in OriGami.
