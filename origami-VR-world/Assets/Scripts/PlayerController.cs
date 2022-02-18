@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
         //Debug.Log("(PC1) vr_world_1_status: " + TextTransfer.gameDetails["vr_world_1_status"]);
         //if (TextTransfer.world1_cbox.isOn)
-        if (string.Equals(TextTransfer.gameDetails["vr_world_1_status"], "True"))
+        if (string.Equals(TextTransfer.gameDetails["vr_world_1_status"], "true"))
         {
             Debug.Log("Hide w2");
             //world_2.SetActive(false);
