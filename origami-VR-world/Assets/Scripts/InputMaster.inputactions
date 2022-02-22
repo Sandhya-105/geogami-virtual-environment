@@ -76,6 +76,17 @@
                 },
                 {
                     "name": "",
+                    "id": "79657ea6-ece4-4917-b42a-92beef469de6",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkFWD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bb871716-55f0-4182-8d45-c0859e967ca5",
                     "path": "<Joystick>/stick/up",
                     "interactions": "",
@@ -186,6 +197,17 @@
                 },
                 {
                     "name": "",
+                    "id": "868aaad5-16c0-4c45-ad2b-bed36df60aeb",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "80bb9ded-3519-42f0-949b-26cccbe4f2d2",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
@@ -241,8 +263,19 @@
                 },
                 {
                     "name": "",
+                    "id": "e40a2eda-3f70-4518-8fe7-8b14ccab9f83",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "85e04384-58e6-4a43-9b73-fcd32960bb32",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -297,7 +330,7 @@
                 {
                     "name": "",
                     "id": "9dd6b3f7-863c-479a-a120-3defdf520935",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -419,6 +452,17 @@
                     "name": "",
                     "id": "02f13898-375d-4960-aa7c-8ba51d331aa3",
                     "path": "<XInputController>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkBWD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "757729d4-44ff-4f86-9229-876dccd6a68e",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
