@@ -35,8 +35,8 @@ _:keyboard: Keyboard:_
 - back arrow: move backward
 - right arrow: turn right
 - left arrow: turn left	 
-- 'D' button: increase walking speed (!)
-- 'A' button: decrease walking speed (!)
+- 'E' button: increase walking speed (!)
+- 'Q' button: decrease walking speed (!)
 
 ## Contact
 
