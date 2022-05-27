@@ -1,4 +1,4 @@
-# VR world for GeoGami Geogame
+# Virtual Enivronment for GeoGami Geogame
 
 This is a virtual environment created using Unity engine. It was created to be used with [GeoGami Geogame](https://github.com/origami-team/origami) for playing GeoGami map reading games within a virtual environment. 
 
