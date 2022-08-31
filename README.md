@@ -1,4 +1,4 @@
-# Virtual Enivronment for GeoGami Geogame
+# Virtual Environment for GeoGami Geogame
 
 This is a virtual environment created using Unity engine. It was created to be used with [GeoGami Geogame](https://github.com/origami-team/origami) for playing GeoGami map reading games within a virtual environment. 
 
@@ -6,17 +6,11 @@ This is a virtual environment created using Unity engine. It was created to be u
 ## Table of contents
 
 <!--ts-->
-   * [Create a Virtual Game](create_a_virtual_game)
    * [Run a Virtual Game](run_a_virtual_game)
+   * [Create a Virtual Game](create_a_virtual_game)
    * [Control the Avatar in VR world](control_the_avatar_in_vr_world)
    * [How to Play](how_to_play)
 <!--te-->
-
-## Create a Virtual Game
-
-1. Download GeoGami app([iOS AppStore](https://apps.apple.com/app/geogami/id1614864078), [Google PlayStore](https://play.google.com/store/apps/details?id=com.ifgi.geogami)) and create a user account.
-2. [Contact us](https://geogami.ifgi.de/kontakt.html) if you are interested in creating virtual games in OriGami. We will change your user role from "user" into "scientist" which allows you to access the VR settings in OriGami.
-3. Create a virtual game on a virtual map in GeoGami for world 1 or world 2.
 
 ## Run a Virtual Game
 
@@ -31,7 +25,12 @@ _For Mac Users (for running the VR world app):_
    For example:
    
    `xattr -cr /Downloads/GeoGami_VR_World_App_MacOS.app`
-  
+
+## Create a Virtual Game
+
+1. Download GeoGami app([iOS AppStore](https://apps.apple.com/app/geogami/id1614864078), [Google PlayStore](https://play.google.com/store/apps/details?id=com.ifgi.geogami)) and create a user account.
+2. [Contact us](https://geogami.ifgi.de/kontakt.html) if you are interested in creating virtual games in OriGami. We will change your user role from "user" into "scientist" which allows you to access the VR settings in OriGami.
+3. Create a virtual game on a virtual map in GeoGami for world 1 or world 2.
 
 ## Control the Avatar in the VR world app
 
