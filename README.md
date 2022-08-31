@@ -2,13 +2,12 @@
 
 This is a virtual environment created using Unity engine. It was created to be used with [GeoGami Geogame](https://github.com/origami-team/origami) for playing GeoGami map reading games within a virtual environment. 
 
-
 ## Table of contents
 
 <!--ts-->
-   * [Run a Virtual Game](run_a_virtual_game)
-   * [Create a Virtual Game](create_a_virtual_game)
-   * [Control the Avatar in VR world](control_the_avatar_in_vr_world)
+   * [Run a Virtual Game](#run-a-virtual-game)
+   * [Create a Virtual Game](#create-a-virtual-game)
+   * [Control the Avatar in the VR world App](#control-the-avatar-in-the-vr-world-app)
    * [How to Play](how_to_play)
 <!--te-->
 
