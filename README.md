@@ -8,7 +8,7 @@ This is a virtual environment created using Unity engine. It was created to be u
    * [Run a Virtual Game](#run-a-virtual-game)
    * [Create a Virtual Game](#create-a-virtual-game)
    * [Control the Avatar in the VR world App](#control-the-avatar-in-the-vr-world-app)
-   * [How to Play](how_to_play)
+   * [How to Play](#how-to-play)
 <!--te-->
 
 ## Run a Virtual Game
@@ -46,6 +46,12 @@ _:keyboard: Functionalities:_
 * :arrow_left: turn left	
 * 'E' button: increase walking speed (!)
 * 'Q' button: decrease walking speed (!)
+
+## How to Play
+
+To play the Virtual Game, you need to follow the steps mentioned above on  **Run a Virtual Game**
+
+![Watch the video](https://uni-muenster.sciebo.de/s/88NJsKF1iQQ0tM5)
 
 ## Contact
 
