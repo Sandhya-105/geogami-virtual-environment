@@ -51,7 +51,7 @@ _:keyboard: Functionalities:_
 
 To play the Virtual Game, you need to follow the steps mentioned above on  **Run a Virtual Game**
 
-![Watch the video](https://uni-muenster.sciebo.de/s/88NJsKF1iQQ0tM5)
+![Watch the video](https://uni-muenster.sciebo.de/s/OTGEn5sAb84jRhS)
 
 ## Contact
 
